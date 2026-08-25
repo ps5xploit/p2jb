@@ -234,7 +234,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABICAI
 <!-- MENSAJE DE INICIO -->
 <div id="mensaje-inicio">
   <div id="wait-text" style="font-size:16px;color:#ffffff;font-weight:400;margin-top:10px;letter-spacing:2px;text-align:center;">
-  </br></br></br><span style="color:#f0c040;font-weight:700;">Please wait...</span></br></br></br></br><span style="color:#ffffff;">- Special thanks -</span></br><span style="color:#ffffff;">Gezine , Claude AI , j0rdy , Sonic-Iso</span>
+  </br></br></br><span style="color:#f0c040;font-weight:700;">Please wait...</span></br></br></br></br><span style="color:#ffffff;">- Special thanks -</span></br><span style="color:#ffffff;">Gezine , Claude AI , Jordy , Sonic-Iso</span>
   </div>
 </div>
 <!-- NUEVO DIV PARA ERROR (OCULTO POR DEFECTO) -->
@@ -733,14 +733,14 @@ window.liveStatus = (function () {
             if (e && e.parentNode) e.parentNode.insertBefore(warnEl, e.nextSibling);
             return warnEl;
         }
-    // var WARN_FROM = ORDER.indexOf("drain");  // <--- ELIMINA ESTA LÍNEA
+    // var WARN_FROM = ORDER.indexOf("drain");  // 
 
     function render() {
       try {
           if (!el) return;
           try {
-              // if (WARN_FROM >= 0 && ORDER.indexOf(key) >= WARN_FROM) ensureWarn(); // <--- ELIMINA O COMENTA ESTA LÍNEA
-              ensureWarn(); // <--- AÑADE ESTA LÍNEA PARA QUE APAREZCA SIEMPRE
+              // if (WARN_FROM >= 0 && ORDER.indexOf(key) >= WARN_FROM) ensureWarn(); // 
+              ensureWarn(); // 
           } catch (e) { }
           var now = Date.now();
           var phaseSecs = (now - t0) / 1000;
