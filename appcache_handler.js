@@ -32,10 +32,28 @@ function add_cache_event_toasts() {
 
     // SOLO mostrar notificación si estamos offline
     if (!navigator.onLine) {
-        showToast('Please connect internet', 300000); 
+        showToast('Please connect internet', 300000);
+
+
+        var errorDiv = document.getElementById('fw-error');
+        if (errorDiv) {
+
+            var msgDiv = errorDiv.querySelector('div[style*="color:#e05561"]');
+            if (msgDiv) {
+                msgDiv.textContent = '⚠️ You need the internet to activate the exploit.';
+            }
+
+            errorDiv.style.display = 'flex';
+
+
+            var waitText = document.getElementById('mensaje-inicio');
+            if (waitText) {
+                waitText.style.display = 'none';
+            }
+        }
     }
 
-    // El resto de eventos de caché están desactivados (comentados)
+    //
     /*
     appCache.addEventListener('downloading', function (e) {
         showToast('★ Downloading cache...');
