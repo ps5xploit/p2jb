@@ -545,7 +545,7 @@ function sendPayloadDirect(name) {
                 // Mostrar mensaje de éxito
                 try {
                     var msg = document.createElement("div");
-                    msg.style.cssText = "position:relative;top:-130px;left:-120px;color:#47c76a;font:700 18px/1.5 Consolas,monospace;background:rgba(0,0,0,0.85);padding:15px 30px;border-radius:8px;z-index:9999;text-align:center;border:1px solid #47c76a;";
+                    msg.style.cssText = "position:fixed;top:20px;right:20px;color:#47c76a;font:700 16px/1.4 Consolas,monospace;background:rgba(0,0,0,0.88);padding:12px 22px;border-radius:8px;z-index:99999;text-align:center;border:1px solid #47c76a;box-shadow:0 0 20px rgba(71,199,106,0.2);";
                     msg.textContent = "✅ " + name + " loaded successfully!";
                     document.body.appendChild(msg);
                     // Ocultar después de 5 segundos
@@ -557,7 +557,7 @@ function sendPayloadDirect(name) {
                 flushMark("PAYLOAD-AUTO-RESULT", name + "-FAILED-direct-" + why.slice(0, 50));
                 try {
                     var msg = document.createElement("div");
-                    msg.style.cssText = "position:relative;top:-130px;left:-120px;color:#e05561;font:700 18px/1.5 Consolas,monospace;background:rgba(0,0,0,0.85);padding:15px 30px;border-radius:8px;z-index:9999;text-align:center;border:1px solid #e05561;";
+                    msg.style.cssText = "position:fixed;top:20px;right:20px;color:#e05561;font:700 16px/1.4 Consolas,monospace;background:rgba(0,0,0,0.88);padding:12px 22px;border-radius:8px;z-index:99999;text-align:center;border:1px solid #e05561;box-shadow:0 0 20px rgba(224,85,97,0.2);";
                     msg.textContent = "❌ " + name + " failed: " + why;
                     document.body.appendChild(msg);
                     setTimeout(function() { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 5000);
@@ -577,7 +577,7 @@ function sendPayloadDirect(name) {
             flushMark("PAYLOAD-AUTO-RESULT", name + "-ok=1-bytes=" + j.bytes);
             try {
                 var msg = document.createElement("div");
-                msg.style.cssText = "position:relative;top:-130px;left:-120px;color:#47c76a;font:700 18px/1.5 Consolas,monospace;background:rgba(0,0,0,0.85);padding:15px 30px;border-radius:8px;z-index:9999;text-align:center;border:1px solid #47c76a;";
+                msg.style.cssText = "position:fixed;top:20px;right:20px;color:#47c76a;font:700 16px/1.4 Consolas,monospace;background:rgba(0,0,0,0.88);padding:12px 22px;border-radius:8px;z-index:99999;text-align:center;border:1px solid #47c76a;box-shadow:0 0 20px rgba(71,199,106,0.2);";
                 msg.textContent = "✅ " + name + " loaded successfully!";
                 document.body.appendChild(msg);
                 setTimeout(function() { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 5000);
@@ -588,7 +588,7 @@ function sendPayloadDirect(name) {
             flushMark("PAYLOAD-AUTO-RESULT", name + "-FAILED-" + why.slice(0, 60));
             try {
                 var msg = document.createElement("div");
-                msg.style.cssText = "position:relative;top:-130px;left:-120px;color:#e05561;font:700 18px/1.5 Consolas,monospace;background:rgba(0,0,0,0.85);padding:15px 30px;border-radius:8px;z-index:9999;text-align:center;border:1px solid #e05561;";
+                msg.style.cssText = "position:fixed;top:20px;right:20px;color:#e05561;font:700 16px/1.4 Consolas,monospace;background:rgba(0,0,0,0.88);padding:12px 22px;border-radius:8px;z-index:99999;text-align:center;border:1px solid #e05561;box-shadow:0 0 20px rgba(224,85,97,0.2);";
                 msg.textContent = "❌ " + name + " failed: " + why;
                 document.body.appendChild(msg);
                 setTimeout(function() { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 5000);
@@ -2095,6 +2095,9 @@ setTimeout(function() {
     });
 })();
 </script>
+
+
+
 
 <div><a class="website-by" href="https://linktr.ee/mouuur0ne" target="_blank">Website by mour0ne</a>
 	<a href="https://linktr.ee/mouuur0ne" target="_blank" style="text-decoration: none;">
